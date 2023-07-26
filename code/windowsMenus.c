@@ -13,7 +13,7 @@ WINDOW *CreateNewWindow(int height,
 	localWindow = newwin( height, width, startRow, startColumn); //Create a window using the parameters 
 
 
-	wrefresh( localWindow );
+	wrefresh( localWindow ); //Update to the new window
 
 	box( localWindow, 0, 0); //Make a box around it with the default char in X and Y
 
@@ -162,7 +162,7 @@ WindowWorld( ){
     mvwprintw(w, 4, 2, "2. Accelaration of the gravity");
     mvwprintw(w, 5, 2, "3. Simulation step");
     mvwprintw(w, 6, 2, "5. Return");
-    mvwprintw(w, 8, 1, " ");
+    mvwprintw(w, 7, 1, " ");
 
 	// Update the screen
 	refresh(); 
@@ -603,4 +603,22 @@ additionalInfo( WINDOW **w )
 		refresh(); 
 		wrefresh( *w );
 	
+}
+
+
+/*
+ * VERSION INFO
+ */
+
+
+void versionText()
+{
+	char str[] = "Pacheco - Version 1.0";
+
+	unsigned char 
+			n = sizeof(str) - 1,
+			y = LINES - 1,
+			x = COLS - n;
+	
+	mvprintw(y,x,"%s",str);	
 }

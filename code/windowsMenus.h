@@ -12,6 +12,8 @@ int WindowObject( );
 int WindowWorld( );
 int WindowGraph( );
 
+void versionText();
+
 void getVALUEtoOBJECT( OBJECT *obj , int option );
 void getVALUEtoWORLD( WORLD *wd , int option );
 void getVALUEtoGRAPH( GRAPH *g , int option );

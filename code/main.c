@@ -27,10 +27,12 @@ main()
 
 	//Other usefull variables
 		//none
+
 	
 	while( optionChoosen != 'Y' && optionChoosen != 'y' )
 	{
 		clear(); //Clear everythign in screen
+		versionText();
 		optionChoosen = (int)WindowMainMenu(); //Get the option from the menu 
 		returnMenu = 0; //Confirmation value
 		
